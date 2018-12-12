@@ -864,7 +864,8 @@ h1 {
   @media (min-width: 768px) {
     h1 {
       font-size: 5.6rem;
-      line-height: 7.2rem; } }
+      line-height: 9.2rem; 
+      font-weight: bold; } }
 
 h1 span {
   font-style: italic; }
@@ -875,7 +876,8 @@ h2 {
   @media (min-width: 768px) {
     h2 {
       font-size: 4.8rem;
-      line-height: 6.4rem; } }
+      line-height: 6.4rem;
+      font-weight: normal; } }
 
 h3 {
   font-size: 2.4rem;
@@ -1325,7 +1327,7 @@ header[role='banner'] {
 .logo {
   text-transform: lowercase; }
   .logo a {
-    background: url("../images/logos/logo.svg") no-repeat 0 0;
+    background: url("../images/logos/top.png") no-repeat 0 0;
     background-size: 4.8rem;
     float: left;
     height: 4.8rem;
@@ -1754,6 +1756,11 @@ footer .column h3 {
   border-radius: .4rem;
   margin-bottom: 4.8rem;
   width: 100%; }
+
+.flexblock.features li.ok{
+  border: 1px solid rgba(255, 255, 0, 1);;
+  background-color: rgba(255, 255, 0, 0.1); 
+  color:rgba(255, 255, 0, 1);}
 
 .flexblock.features li h2 {
   text-transform: uppercase; }
