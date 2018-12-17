@@ -810,7 +810,7 @@ table,
 big,
 textarea,
 label {
-  line-height: 3.2rem;
+  line-height: 2.2rem;
   margin-bottom: 3.2rem; }
 
 li,
@@ -874,10 +874,10 @@ li h1 {
   margin-bottom: 0; }
   @media (min-width: 768px) {
     li h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       line-height: 3.2rem; 
       margin: 1rem;
-      padding: 0.7rem;
+      padding: 0.7rem 0 0.7rem;
       font-weight: normal; }
 }
 
@@ -1753,6 +1753,10 @@ footer .column h3 {
   background-color: rgba(255, 255, 0, 0.1); 
   color:rgba(255, 255, 0, 1);}
 
+.anser{
+    color: rgba(255, 255, 0, 1);
+    font-size: 1.5rem; }
+
 .flexblock.features li h2 {
   text-transform: uppercase; }
 
@@ -1792,7 +1796,8 @@ footer .column h3 {
   .flexblock.features > li {
     margin-left: 2%;
     margin-right: 1%;
-    width: 29%; }
+    width: 29%; 
+    padding: 0;}
   .size-50 .flexblock.features > li {
     width: 46%; }
   .column .flexblock.features > li {
