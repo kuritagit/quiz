@@ -860,7 +860,7 @@ h4 svg {
 
 h1 {
   font-size: 3rem;
-  line-height: 2.6rem; 
+  line-height: 3.4rem; 
   margin-bottom: 0.2em;}
   @media (min-width: 768px) {
     h1 {
@@ -1271,7 +1271,7 @@ https://github.com/webslides/webslides/issues/57 -- */
 header,
 footer,
 #navigation {
-  padding: 2.4rem;
+  padding: 1.4rem;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   width: 100%; }
@@ -1437,7 +1437,7 @@ section,
   min-height: 100vh;
   /*Fullscreen*/
   /* Prototyping? min-height: 720px (Baseline: 8px = .8rem)*/
-  padding: 2.4rem;
+  padding: 5rem 2.4rem;
   /*Fixed/Visible header? padding-top: 12rem; */
   page-break-after: always;
   position: relative;
@@ -1478,7 +1478,7 @@ Aligned items [class*="content-"]=== */
 [class*='content-'][class*='bg-'],
 [class*='content-'].frame,
 [class*='align'][class*='bg-'] {
-  padding: 4.8rem; }
+  padding: 1rem 4.8rem; }
 
 form[class*='bg-'] {
   padding: 2.4rem; }
@@ -3064,7 +3064,7 @@ Solution: stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap
 /* -- Disable elastic scrolling/bounce:
 webslides.js will add .ws-ready automatically. Don't worry :) -- */
 body {
-  background-color: #f7f9fb;
+  background-color: #000;
   color: #333; }
 
 :focus {
