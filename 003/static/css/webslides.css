@@ -3190,6 +3190,11 @@ Slides - Backgrounds <section class="bg-primary">
   background: -webkit-gradient(linear, left top, left bottom, from(#000), color-stop(50%, #1a2028), to(#293845));
   background: linear-gradient(to bottom, #000 0%, #1a2028 50%, #293845 100%); }
 
+/* BG body Apple Keynote*/
+.bg-body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1d1d1d), color-stop(50%, #1a2028), to(#2c3542));
+  background: linear-gradient(to bottom, #1d1d1d 0%, #2c3542 50%, #3a5063 100%); }
+
 /*Font Color*/
 .bg-trans-dark,
 .bg-trans-gradient,
