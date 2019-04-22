@@ -1,86 +1,57 @@
-'use strict';
+// This is the "Offline page" service worker
 
-const CACHE_NAME = 'cache-v2';
-const urlsToCache = [
-    './',
-    './styles/main.css',
-    './images/image.jpg',
-    './script/main.js'
-];
+const CACHE = "pwabuilder-page";
 
-self.addEventListener('install', (event)/* InstallEvent */ => {
-    console.info('install', event);
-    
-    // Service Worker 更新時に waiting 状態をスキップしたい場合
-    // event.waitUntil(self.skipWaiting());
-    
-    // インストール処理
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-              .then((cache) => {
-                  console.log('Opened cache');
-                  
-                  // 指定されたリソースをキャッシュに追加する
-                  return cache.addAll(urlsToCache);
-              })
-    );
+// TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
+const offlineFallbackPage = "index.html";
+
+// Install stage sets up the offline page in the cache and opens a new cache
+self.addEventListener("install", function (event) {
+  console.log("[PWA Builder] Install Event processing");
+
+  event.waitUntil(
+    caches.open(CACHE).then(function (cache) {
+      console.log("[PWA Builder] Cached offline page during install");
+
+      if (offlineFallbackPage === "index.html") {
+        return cache.add(new Response("TODO: Update the value of the offlineFallbackPage constant in the serviceworker."));
+      }
+
+      return cache.add(offlineFallbackPage);
+    })
+  );
 });
 
-self.addEventListener('activate', (event) => {
-    console.info('activate', event);
-    
-    var cacheWhitelist = [CACHE_NAME];
+// If any fetch fails, it will show the offline page.
+self.addEventListener("fetch", function (event) {
+  if (event.request.method !== "GET") return;
 
-    // すぐにControllerになって欲しい時は claim を呼ぶ
-    // event.waitUntil(self.clients.claim());
-    
-    event.waitUntil(
-        caches.keys().then((cacheNames) => {
-            return Promise.all(
-                cacheNames.map((cacheName) => {
-                    // ホワイトリストにないキャッシュ(古いキャッシュ)は削除する
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
-        })
-    );
+  event.respondWith(
+    fetch(event.request).catch(function (error) {
+      // The following validates that the request was for a navigation to a new document
+      if (
+        event.request.destination !== "document" ||
+        event.request.mode !== "navigate"
+      ) {
+        return;
+      }
+
+      console.error("[PWA Builder] Network request Failed. Serving offline page " + error);
+      return caches.open(CACHE).then(function (cache) {
+        return cache.match(offlineFallbackPage);
+      });
+    })
+  );
 });
 
-self.addEventListener('fetch', (event) => {
-    console.info('fetch', event);
-    
-    event.respondWith(
-        caches.match(event.request)
-              .then((response) => {
-                  if (response) {
-                      return response;
-                  }
-            
-                  // 重要：リクエストを clone する。リクエストは Stream なので
-                  // 一度しか処理できない。ここではキャッシュ用、fetch 用と2回
-                  // 必要なので、リクエストは clone しないといけない
-                  let fetchRequest = event.request.clone();
-            
-                  return fetch(fetchRequest)
-                      .then((response) => {
-                          if (!response || response.status !== 200 || response.type !== 'basic') {
-                              return response;
-                          }
-                    
-                          // 重要：レスポンスを clone する。レスポンスは Stream で
-                          // ブラウザ用とキャッシュ用の2回必要。なので clone して
-                          // 2つの Stream があるようにする
-                          let responseToCache = response.clone();
-                    
-                          caches.open(CACHE_NAME)
-                                .then((cache) => {
-                                    cache.put(event.request, responseToCache);
-                                });
-                    
-                          return response;
-                      });
-              })
-    );
+// This is an event that can be fired from your page to tell the SW to update the offline page
+self.addEventListener("refreshOffline", function () {
+  const offlinePageRequest = new Request(offlineFallbackPage);
+
+  return fetch(offlineFallbackPage).then(function (response) {
+    return caches.open(CACHE).then(function (cache) {
+      console.log("[PWA Builder] Offline page updated from refreshOffline event: " + response.url);
+      return cache.put(offlinePageRequest, response);
+    });
+  });
 });
