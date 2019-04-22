@@ -1,1 +1,408 @@
-test
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="manifest.json">
+    <title>WebSlides PWA</title>
+    <meta name="description" content="WebSlides">
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
+    <link rel="stylesheet" type="text/css" media="all" href="static/css/svg-icons.css">
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+    <script type="text/javascript">
+        if ("serviceWorker" in navigator) {
+          if (navigator.serviceWorker.controller) {
+            console.log("[PWA Builder] active service worker found, no need to register");
+          } else {
+            // Register the service worker
+            navigator.serviceWorker
+              .register("pwabuilder-sw.js", {
+                scope: "./"
+              })
+              .then(function (reg) {
+                console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+              });
+          }
+        }
+    </script>
+  </head>
+  <body class="bg-body">
+    <header role="banner">
+      <nav role="navigation">
+        <p class="logo"><a href="index.html" title="WebSlides">Slides PWA</a></p>
+      </nav>
+    </header>
+
+    <main role="main">
+      <article id="webslides">
+
+
+	<!-- １ -->
+        <section class="bg-apple aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img class="whitelogo" src="static/images/logos/apple.svg" alt="Apple Logo"></h1>
+          </div>
+
+        </section>
+
+	<!-- ２ -->
+        <section class="bg-apple aligncenter">
+          <div class="aligncenter fadeInUp">
+            <h1>PWABuilder で PRA化 してみたら便利だった話</h1>
+            <h2>2019年04月27日（土）</h2>
+          </div>
+        </section>
+
+	<!-- ３ -->
+        <section class="bg-apple aligncenter">
+          <div class="wrap size-50">
+            <h1>Web Creators MeetUp</h1>
+            <p class="text-intro">クリスマス ＆ 忘年会 ビアバッシュLT会</p>
+          </div>
+        </section>
+
+	<!-- ４ -->
+        <section class="bg-apple aligncenter">
+          <div class="wrap">
+            <h1>Web業界2018とPWAで遊んでみた！</h1>
+            <p class="text-intro">kurita Tatsuo</p>
+          </div>
+        </section>
+
+	<!-- ５ -->
+        <section class="bg-apple aligncenter">
+          <div class="wrap">
+            <h1>まずは...</h1>
+          </div>
+        </section>
+
+	<!-- ６ -->
+        <section class="bg-apple aligncenter">
+          <div class="wrap">
+            <h1>Web業界 2018 振り返り</h1>
+          </div>
+        </section>
+
+	<!-- ７ -->
+        <section class="bg-apple aligncenter">
+          <figure><img class="aligncenter" src="./static/images/question.png" ></figure>
+          <span class="background dark" style="background-image:url('./static/images/question.png')"></span>
+          <div class="wrap">
+            <h1>クイズ</h1>
+          </div>
+        </section>
+
+
+
+
+	<!-- ８問題 -->
+        <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q1. UIデザインツール</h1>
+            <h2>2018年度はUIデザインツールが広く広まったが、Windowsで利用できないのは？</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1. Adobe XD</h1></div></li>
+              <li><div><h1>2. Figma</h1></div></li>
+              <li><div><h1>3. Sketch</h1></div></li>
+            </ul>
+            <p class="anser">　</p>
+          </div>
+        </section>
+
+	<!-- ９回答 -->
+        <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q1. UIデザインツール</h1>
+            <h2>2018年度はUIデザインツールが広く広まったが、Windowsで利用できないのは？</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1. Adobe XD</h1></div></li>
+              <li><div><h1>2. Figma3.0</h1></div></li>
+              <li class="ok"><div><h1>3. Sketch</h1></div></li>
+            </ul>
+            <p class="anser">Sketch 以外はWindowsで利用できます。</p>
+          </div>
+        </section>
+
+
+
+
+
+	<!-- １０問題 -->
+        <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q2. ネット流行語</h1>
+            <h2>今年、ネットで最も流行した単語を表彰する「ネット流行語 100 2018」において、年間大賞を受賞した流行語は何？（ドワンゴ・ピクシブ発表）</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1. そだねー</h1></div></li>
+              <li><div><h1>2. 半端ないって</h1></div></li>
+              <li><div><h1>3. vtuber</h1></div></li>
+              <li><div><h1>4. eスポーツ</h1></div></li>
+              <li><div><h1>5. おっさんずラブ</h1></div></li>
+              <li><div><h1>6. ポプテピピック</h1></div></li>
+            </ul>
+            <p class="anser">　</p>
+          </div>
+        </section>
+
+	<!-- １１回答 -->
+        <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q2. ネット流行語</h1>
+            <h2>今年、ネットで最も流行した単語を表彰する「ネット流行語 100 2018」において、年間大賞を受賞した流行語は何？（ドワンゴ・ピクシブ発表）</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1. そだねー</h1></div></li>
+              <li><div><h1>2. 半端ないって</h1></div></li>
+              <li><div><h1>3. vtuber</h1></div></li>
+              <li><div><h1>4. eスポーツ</h1></div></li>
+              <li><div><h1>5. おっさんずラブ</h1></div></li>
+              <li class="ok"><div><h1>6. ポプテピピック</h1></div></li>
+            </ul>
+            <p class="anser">「ネット流行語 100 2018」ランキング。1位：ポプテピピック、2位：バーチャルYouTuber、3位：Fate/GrandOrder、4位：止まるんじゃねぇぞ…、5位：電脳少女シロ、6位：安室透。ユーキャン新語・流行語大賞2018は、1位：そだねー、ほか：eスポーツ、(大迫)半端ないって、おっさんずラブ、＃MeToo等</p>
+          </div>
+        </section>
+
+
+
+
+
+
+
+
+	<!-- １２解説 -->
+        <section class="bg-apple aligncenter slide current" id="section-14" style="">
+          <div class="wrap zoomIn">
+            <h1>
+              <img src="./static/images/hoshiiro.jpg">
+            </h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+
+
+	<!-- １３問題 -->
+        <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q3. AR（拡張現実）</h1>
+            <h2>「拡張現実」実在する風景にバーチャルの視覚情報を重ねて表示することで、目の前にある世界を“仮想的に拡張する”というものであるが、ARの「A」はどれ？</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1. Amazon</h1></div></li>
+              <li><div><h1>2. Augmented</h1></div></li>
+              <li><div><h1>3. authority</h1></div></li>
+            </ul>
+            <p class="anser">　</p>
+          </div>
+        </section>
+
+	<!-- １４回答 -->
+        <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q3. AR（拡張現実）</h1>
+            <h2>実在する風景にバーチャルの視覚情報を重ねて表示することで、目の前にある世界を“仮想的に拡張する”というものであるが、ARの「A」はどれ？</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1. Amazon</h1></div></li>
+              <li class="ok"><div><h1>2. Augmented</h1></div></li>
+              <li><div><h1>3. authority</h1></div></li>
+            </ul>
+            <p class="anser">ARとは「Augmented Reality（アグメンティッド・リアリティ）」の略、iOSはARKit、AndroidはARCoreが利用可能になった。</p>
+          </div>
+        </section>
+
+
+
+
+
+
+	<!-- １５問題 -->
+        <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q4. アプリ</h1>
+            <h2>質屋アプリと呼ばれ話題になり、DMMに70億円で買収されたことでも話題になったアプリの名前は？</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1. TikTok</h1></div></li>
+              <li><div><h1>2. ZAIM</h1></div></li>
+              <li><div><h1>3. CACHE</h1></div></li>
+              <li><div><h1>4. MONEY</h1></div></li>
+              <li><div><h1>5. CASH</h1></div></li>
+              <li><div><h1>6. PayPay</h1></div></li>
+            </ul>
+            <p class="anser">　</p>
+          </div>
+        </section>
+
+	<!-- １６回答 -->
+        <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q4. アプリ</h1>
+            <h2>質屋アプリと呼ばれ話題になり、DMMに70億円で買収されたことでも話題になったアプリの名前は？</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1. TikTok</h1></div></li>
+              <li><div><h1>2. ZAIM</h1></div></li>
+              <li><div><h1>3. CACHE</h1></div></li>
+              <li><div><h1>4. MONEY</h1></div></li>
+              <li class="ok"><div><h1>5. CASH</h1></div></li>
+              <li><div><h1>6. PayPay</h1></div></li>
+            </ul>
+            <p class="anser">CASH（キャッシュ）（https://cash.jp/）は、DMM.com が昨年10月31日に同社を約70億円で買収したが、5億円で全株式を光本社長に5億円で売却（2018/11/7）</p>
+          </div>
+        </section>
+
+
+
+
+
+
+	<!-- １７問題 -->
+        <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q5. 人工知能（AI）</h1>
+            <h2>深層強化学習の1つ方式で、Qラーニングと呼ばれる強化学習手法にディープラーニングを組み合わせたものはどれか？</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1. CNN</h1></div></li>
+              <li><div><h1>2. DQN</h1></div></li>
+              <li><div><h1>3. GAN</h1></div></li>
+            </ul>
+            <p class="anser">　</p>
+          </div>
+        </section>
+
+	<!-- １８回答 -->
+         <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q5. 人工知能（AI）</h1>
+            <h2>深層強化学習の1つ方式で、Qラーニングと呼ばれる強化学習手法にディープラーニングを組み合わせたものはどれか？</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1. CNN</h1></div></li>
+              <li class="ok"><div><h1>2. DQN</h1></div></li>
+              <li><div><h1>3. GAN</h1></div></li>
+            </ul>
+            <p class="anser">DQN「深層強化学習」（Deep Q-Network）、CNN「畳み込みニューラルネットワーク」（Convolutional Neural Network）、GAN「敵対的生成ネットワーク」（Genera tive Adversarial Networks）</p>
+          </div>
+        </section>
+
+
+
+
+
+	<!-- １９問題 -->
+        <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q6. 5G（第5世代移動通信システム）</h1>
+            <h2>「エリクソン・モビリティレポート」の2017年11月版を発表内容で、5G（第5世代移動通信システム）の2023年に加入数が世界でどのくらいの加入数に達すると予測したか</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1. 1.2億</h1></div></li>
+              <li><div><h1>2. 3.2億</h1></div></li>
+              <li><div><h1>3. 10億</h1></div></li>
+              <li><div><h1>4. 23億</h1></div></li>
+              <li><div><h1>5. 35億</h1></div></li>
+              <li><div><h1>6. 72億</h1></div></li>
+            </ul>
+            <p class="anser">　</p>
+          </div>
+        </section>
+
+	<!-- ２０回答 -->
+         <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q6. 5G（第5世代移動通信システム）</h1>
+            <h2>「エリクソン・モビリティレポート」の2017年11月版を発表内容で、5G（第5世代移動通信システム）の2023年に加入数が世界でどのくらいの加入数に達すると予測したか</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1. 1.2億</h1></div></li>
+              <li><div><h1>2. 3.2億</h1></div></li>
+              <li class="ok"><div><h1>3. 10億</h1></div></li>
+              <li><div><h1>4. 23億</h1></div></li>
+              <li><div><h1>5. 35億</h1></div></li>
+              <li><div><h1>6. 72億</h1></div></li>
+            </ul>
+            <p class="anser">世界の人口は現在およそ70億（男性で35億）※2016年当時。2025年で80億に達する予測。2023年の5G加入契約はほぼスマートフォン型のデバイスで、2023年時点の72億のスマートフォンのうち10億が5Gに対応するとの予測（人口カバー率は20%以上）。</p>
+          </div>
+        </section>
+
+
+
+
+	<!-- ２１問題 -->
+        <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q7. PWA（Progressive Web Apps）</h1>
+            <h2>PWAの実装技術・サービスで、以下の中から利用できないものは？</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1.HTTPS通信</h1></div></li>
+              <li><div><h1>2.Splash 画面</h1></div></li>
+              <li><div><h1>3.フルスクリーン</h1></div></li>
+              <li><div><h1>4.デスクトップ</h1></div></li>
+              <li><div><h1>5.Google Play登録</h1></div></li>
+              <li><div><h1>6.ない（全て可）</h1></div></li>
+            </ul>
+            <p class="anser">　</p>
+          </div>
+        </section>
+
+	<!-- ２２回答 -->
+        <section class="bg-apple">
+          <div class="wrap">
+            <h1>Q7. PWA（Progressive Web Apps）</h1>
+            <h2>PWAの実装技術・サービスで、以下の中から利用できないものは？</h2>
+            <ul class="flexblock features">
+              <li><div><h1>1.HTTPS通信</h1></div></li>
+              <li><div><h1>2.Splash 画面</h1></div></li>
+              <li><div><h1>3.フルスクリーン</h1></div></li>
+              <li><div><h1>4.デスクトップ</h1></div></li>
+              <li><div><h1>5.Google Play登録</h1></div></li>
+              <li class="anser"><div><h1>6.ない（全て可）</h1></div></li>
+            </ul>
+            <p class="anser">PWA は、Google Playでは現時点では登録できないが今後できる予定らしい。中でも「Google Maps Go は、Google マップ アプリの軽量版のプログレッシブ ウェブアプリ」で現在Google Playですでに配信されている（2018年5月より）。Microsoftは2018年より、アプリストア「Microsoft Store」で配信開始しました。</p>
+          </div>
+        </section>
+
+
+        <section class="bg-apple aligncenter slide current" id="section-9" style="">
+          <div class="wrap">
+            <h1>おめでとうございます！</h1>
+          </div>
+        </section>
+
+        <section class="bg-apple aligncenter slide current" id="section-9" style="">
+          <div class="wrap">
+            <h2 class="text-data">実はコレ</h2>
+          </div>
+        </section>
+
+        <section class="bg-apple aligncenter slide current" id="section-9" style="">
+          <div class="wrap">
+            <h2 class="text-data">PWA!</h2>
+            <h3>で出来てる。</h3>
+          </div>
+        </section>
+
+        <section class="bg-apple aligncenter">
+          <h1><strong>本編はじまります</strong></h1>
+        </section>
+
+      </article>
+    </main>
+    <!--main-->
+
+    <!-- Required -->
+    <script src="static/js/webslides.js"></script>
+
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <script defer src="static/js/svg-icons.js"></script>
+
+  </body>
+</html>
