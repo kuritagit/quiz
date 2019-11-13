@@ -1,0 +1,91 @@
+{
+    "dir" : "ltr",
+    "lang" : "Japanese",
+    "name": "PWA_slide",
+    "scope" : "/quiz/005/",
+    "display": "fullscreen",
+    "start_url": "/quiz/005/index.html#slide=1",
+    "short_name": "PWA_Quiz",
+    "theme_color": "#00A862",
+    "description" : "PWA_Quiz",
+    "background_color": "#FFFFFF",
+    "icons": [
+        {
+            "src": "/quiz/005/icon/44x44.png",
+            "sizes": "44x44"
+        },
+        {
+            "src": "/quiz/005/icon/48x48.png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "/quiz/005/icon/1240x600.png",
+            "sizes": "1240x600"
+        },
+        {
+            "src": "/quiz/005/icon/300x300.png",
+            "sizes": "300x300"
+        },
+        {
+            "src": "/quiz/005/icon/150x150.png",
+            "sizes": "150x150"
+        },
+        {
+            "src": "/quiz/005/icon/88x88.png",
+            "sizes": "88x88"
+        },
+        {
+            "src": "/quiz/005/icon/24x24.png",
+            "sizes": "24x24"
+        },
+        {
+            "src": "/quiz/005/icon/50x50.png",
+            "sizes": "50x50"
+        },
+        {
+            "src": "/quiz/005/icon/620x300.png",
+            "sizes": "620x300"
+        },
+        {
+            "src": "/quiz/005/icon/192x192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/quiz/005/icon/144x144.png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "/quiz/005/icon/96x96.png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/quiz/005/icon/72x72.png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/quiz/005/icon/36x36.png",
+            "sizes": "36x36"
+        },
+        {
+            "src": "/quiz/005/icon/1024x1024.png",
+            "sizes": "1024x1024"
+        },
+        {
+            "src": "/quiz/005/icon/180x180.png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "/quiz/005/icon/152x152.png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "/quiz/005/icon/120x120.png",
+            "sizes": "120x120"
+        },
+        {
+            "src": "/quiz/005/icon/76x76.png",
+            "sizes": "76x76"
+        }
+    ]}
+
+
